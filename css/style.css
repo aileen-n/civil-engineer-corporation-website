@@ -1,0 +1,386 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;	
+}
+
+/*div{
+	outline:1px solid #00F;
+}*/
+
+div.clear{
+	width:0;
+	height:0;
+	clear:both;	
+}
+
+body{
+	background:url(../img/bg-main.jpg) no-repeat top center;
+	background-size:cover;	
+}
+
+div.container{
+	width:840px;
+	margin:0 auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+div.container-up{
+	width:840px;
+	min-height:700px;
+	padding:1px;
+	padding-bottom:33px;	
+}
+
+/*------------------- full-menu -----------------*/
+
+div.full-menu{
+	float:right;
+	width:197px;
+	min-height:683px;
+	margin-top:20px;	
+}
+
+div.logo{
+	width:auto;
+	min-height:140px;
+	background-color:#000;	
+	background: url(../img/logo.JPG) center no-repeat ;
+	background-size:cover;
+}
+
+/*---------- menu -------------*/
+
+div.menu{
+	width:auto;
+	min-height:168px;
+	margin-top:5px;
+	padding-top:15px;
+	background-color:#000;
+	opacity:0.7;
+	background:url(../img/bg_menu.png) repeat;
+	position:relative;
+	z-index:99;		
+}
+
+div.menu ul{
+	list-style-type:none;
+}
+
+div.menu li{
+	background: url(../img/hover_mask.png) -600px -266px no-repeat;
+}
+
+
+a{
+	-webkit-transition:all .5s linear;
+	-moz-transition:all .5s linear;
+	-o-transition:all .5s linear;
+	-ms-transition:all .5s linear;
+	transition:all .5s linear;	
+}
+
+div.menu a{
+	display: block;
+	text-align: right;
+	text-transform:uppercase;
+	color: white;
+	padding:7px 40px;
+	width:auto;
+	position: relative;	
+	text-decoration:none;
+	transition:width 2s;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+div.menu li:hover a {
+	/*color:#010101;*/
+	margin-right:5px;
+	
+}
+
+div.menu li:hover{
+	background:#000;
+}
+
+
+/*-------------------------*/
+
+div.planning{
+	width:auto;
+	min-height:111px;
+	margin-top:5px;
+	background-color:#FFF;
+	padding:1px;
+}
+
+a{
+	text-decoration:none;
+}
+
+div.planning h2 {
+	color:#000;
+	font-size:25px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:right;
+	margin: 75px 10px 0 0;
+}
+
+div.news h2 , div.recent-projects h2{
+	color:#FFF;
+	font-size:25px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:right;
+	margin: 75px 10px 0 0;	
+}
+
+div.planning img , div.news img , div.recent-projects img{
+	float:left;
+	position: relative;
+	bottom: 34px;
+	left: 8px;
+}
+
+div.planning img:hover , div.news img:hover , div.recent-projects img:hover{
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	transition:all .5s;
+	-webkit-transition:all .5s;
+}
+
+/*--------------------------*/
+
+div.news{
+	width:auto;
+	min-height:111px;
+	margin-top:5px;	
+	background-color:#000;
+	padding:1px;	
+}
+
+/*-------------------------------*/
+
+div.recent-projects{
+	width:auto;
+	min-height:111px;
+	margin-top:5px;	
+	background-color:rgb(243,33,133);
+	padding:1px;	
+}
+
+/*------------------------------------ content --------------------------------------------------------*/
+
+div.content{
+	margin-right:215px;
+	width:625px;
+	min-height:612px;
+	margin-top:90px;	
+}
+
+div.container-down{
+	width:auto;
+	min-height:122px;
+}
+
+/* General */
+#css3-slider {
+  position:relative;
+}
+
+#css3-slider li {
+  list-style:none;
+  margin:0px 0px;
+  padding:0px 0px;
+}
+
+
+
+label {
+cursor: pointer;
+}
+
+#css3-slider li article.show-content {
+  border:none;
+  outline:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:0px;
+  height:0px;
+  visibility:hidden;
+  opacity:0;
+  -webkit-transition:all 2s ease-in-out;
+  -moz-transition:all 2s ease-in-out;
+  -ms-transition:all 2s ease-in-out;
+  -o-transition:all 2s ease-in-out;
+  transition:all 2s ease-in-out;
+  -webkit-transform:rotate(0deg) scale(0);
+  -moz-transform:rotate(0deg) scale(0);
+  -ms-transform:rotate(0deg) scale(0);
+  -o-transform:rotate(0deg) scale(0);
+  transform:rotate(0deg) scale(0);
+}
+
+
+/* Show the image with transition */
+#css3-slider li input:checked ~ article.show-content,
+#css3-slider li input:checked ~ a article.show-content {
+    top:0%;
+    left:0%;
+    width:625px;
+    height:612px;
+    visibility:visible;
+    -webkit-transform:rotate(720deg) scale(1);
+    -moz-transform:rotate(720deg) scale(1);
+    -ms-transform:rotate(720deg) scale(1);
+    -o-transform:rotate(720deg) scale(1);
+    transform:rotate(720deg) scale(1);
+    opacity:1;
+    z-index:99;
+    background-color: black;
+	cursor:default;
+}
+
+/* Hide the radio */
+#css3-slider input {
+  display:none;
+}
+
+/*-------------------- gallery ----------------*/
+
+.slider {
+  width: 625px;
+  height: 612px;
+  position: relative;
+  overflow: hidden;
+}
+
+.images {
+  width: 625px;
+  height: 463px;
+  -webkit-transition: background .5s linear;
+}
+
+div.slider input[type='radio'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-size: 225px 70px;
+  width: 152px;
+  height: 140px;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  top: 466px;
+  margin:2px;
+  -webkit-filter: grayscale();
+}
+div.slider input[type='radio']:checked {
+  content: '';
+  box-shadow: none;
+  -webkit-filter: none;
+}
+
+div.slider input[type='radio']:hover{
+  
+  -webkit-filter: none;
+  transform: scale(1.05);
+  z-index: 9999;
+}
+
+div.slider input{
+	display:block;	
+}
+
+.slide1 {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand1.jpg);
+}
+
+.slide2 {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand2.jpg);
+}
+
+.slide3 {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand3.jpg);
+}
+
+.slide4 {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand4.jpg);
+}
+
+.slide1:checked ~ .images {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand1.jpg);
+}
+
+.slide2:checked ~ .images {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand2.jpg);
+}
+
+.slide3:checked ~ .images {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand3.jpg);
+}
+
+.slide4:checked ~ .images {
+  background: url(http://iweb.uz/azik/wp-content/uploads/2012/10/samarkand4.jpg);
+}
+
+/*------------------------------------------- Footer ------------------------------------------*/
+
+div.footer{
+	width:auto;	
+	min-height:50px;
+	background-color:#000;
+	opacity:0.8;
+	padding:28px 45px;
+}
+
+div.footer p{
+	color:#CCC;
+	text-align:justify;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div.address{
+	float:right;
+	width:145px;
+	min-height:50px;
+}
+
+/*-----------------*/
+
+div.tel{
+	width:auto;
+	margin:0 200px 0 395px;
+	min-height:50px;	
+}
+
+div.tel-text{
+	width:45px;
+	min-height:inherit;
+	float:right;
+}
+
+div.tel-no{
+	min-height:inherit;
+	margin-right:50px;
+}
+
+/*-----------------*/
+
+div.policy{
+	float:left;
+	width:315px;
+	min-height:50px;	
+}
+
+
+
+
+
+
